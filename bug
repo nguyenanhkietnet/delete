@@ -1,0 +1,24 @@
+db.users.aggregate([ { $indexStats: {} } ])
+
+[{
+    "name": "idx_users_by_user_status_created_at",
+    "key": {
+        "user_status": 1,
+        "created_at": 1
+    },
+    "host": "6b1b716ae456:27017",
+    "accesses": {
+        "ops": NumberLong(456550227),
+        "since": ISODate("2018-05-31T15:31:09.020Z")
+    }
+} {
+    "name": "idx_users_by_user_status",
+    "key": {
+        "user_status": 1
+    },
+    "host": "6b1b716ae456:27017",
+    "accesses": {
+        "ops": NumberLong(277641131),
+        "since": ISODate("2018-05-31T15:05:39.148Z")
+    }
+}]
